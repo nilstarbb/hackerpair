@@ -18,11 +18,42 @@
             <v-container>Hello world</v-container>
             @yield('content')
           </v-content>
+          <template>
+            <div>
+              <v-alert
+                :value="true"
+                type="success"
+              >
+                This is a success alert.
+              </v-alert>
+          
+              <v-alert
+                :value="true"
+                type="info"
+              >
+                This is a info alert.
+              </v-alert>
+          
+              <v-alert
+                :value="true"
+                type="warning"
+              >
+                This is a warning alert.
+              </v-alert>
+          
+              <v-alert
+                :value="true"
+                type="error"
+              >
+                This is a error alert.
+              </v-alert>
+            </div>
+          </template>
         </v-app>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> --}}
+    {{-- <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script> --}}
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
