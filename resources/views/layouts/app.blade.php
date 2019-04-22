@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"> --}}
+    {{-- <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>HackerPair</title>
 </head>
@@ -14,41 +14,26 @@
 
     <div id="app">
         <v-app>
-          <v-content>
-            <v-container>Hello world</v-container>
-            @yield('content')
-          </v-content>
-          <template>
-            <div>
-              <v-alert
-                :value="true"
-                type="success"
-              >
-                This is a success alert.
-              </v-alert>
-          
-              <v-alert
-                :value="true"
-                type="info"
-              >
-                This is a info alert.
-              </v-alert>
-          
-              <v-alert
-                :value="true"
-                type="warning"
-              >
-                This is a warning alert.
-              </v-alert>
-          
-              <v-alert
-                :value="true"
-                type="error"
-              >
-                This is a error alert.
-              </v-alert>
-            </div>
-          </template>
+            <v-toolbar>
+              <v-toolbar-side-icon></v-toolbar-side-icon>
+              <v-toolbar-title>Title</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items class="hidden-sm-and-down">
+                <v-btn flat>Link One</v-btn>
+                <v-btn flat>Link Two</v-btn>
+                <v-btn flat>Link Three</v-btn>
+              </v-toolbar-items>
+            </v-toolbar>
+
+          <v-container>
+              
+              @yield('content')
+          </v-container>
+
+          <v-footer class="pa-3">
+            <v-spacer></v-spacer>
+            <div>&copy; 2019</div>
+          </v-footer>
         </v-app>
     </div>
 

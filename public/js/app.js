@@ -57405,11 +57405,19 @@ window.Vuetify = __webpack_require__(/*! vuetify */ "./node_modules/vuetify/dist
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-new Vue({
-  el: '#app',
-  created: function created() {
-    this.$vuetify.theme.error = '#b71c1c';
+Vue.use(Vuetify, {
+  theme: {
+    warning: '#3f51b5',
+    success: '#b0bec5',
+    info: '#8c9eff',
+    error: '#b71c1c'
   }
+});
+new Vue({
+  el: '#app' // created() {
+  //   this.$vuetify.theme.error = '#b71c1c';
+  // }
+
 });
 
 /***/ }),

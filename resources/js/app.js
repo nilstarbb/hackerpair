@@ -29,9 +29,18 @@ window.Vuetify = require('vuetify');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.use(Vuetify, {
+  theme: {
+    warning: '#3f51b5',
+    success: '#b0bec5',
+    info: '#8c9eff',
+    error: '#b71c1c'
+  }
+})
+
 new Vue({
     el: '#app',
-    created() {
-      this.$vuetify.theme.error = '#b71c1c';
-    }
+    // created() {
+    //   this.$vuetify.theme.error = '#b71c1c';
+    // }
 });
