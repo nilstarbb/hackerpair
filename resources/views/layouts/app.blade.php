@@ -15,24 +15,23 @@
     <div id="app">
         <v-app>
             <v-toolbar>
-              <v-toolbar-side-icon></v-toolbar-side-icon>
-              <v-toolbar-title>Title</v-toolbar-title>
+              <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
+              <v-toolbar-title>
+                <v-btn flat href="{{ route('home') }}">HackerPair</v-btn>
+              </v-toolbar-title>
               <v-spacer></v-spacer>
               <v-toolbar-items class="hidden-sm-and-down">
-                <v-btn flat>Link One</v-btn>
-                <v-btn flat>Link Two</v-btn>
-                <v-btn flat>Link Three</v-btn>
+                <v-btn flat href="{{ route('events.index') }}">Events</v-btn>
               </v-toolbar-items>
             </v-toolbar>
 
           <v-container>
-              
               @yield('content')
           </v-container>
 
           <v-footer class="pa-3">
             <v-spacer></v-spacer>
-            <div>&copy; 2019</div>
+            <div>HackerPair &copy; 2019</div>
           </v-footer>
         </v-app>
     </div>
