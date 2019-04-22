@@ -4,6 +4,8 @@ namespace Hackerpair\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Hackerpair\Event;
+
 class EventController extends Controller
 {
     /**
@@ -13,7 +15,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('event.index');
+        $events = Event::paginate(20);
+        return view('event.index')->with('events', $events); 
     }
 
     /**

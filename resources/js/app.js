@@ -8,7 +8,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-window.Vuetify = require('vuetify');
+// window.Vuetify = require('vuetify');
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,14 +29,14 @@ window.Vuetify = require('vuetify');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.use(Vuetify, {
-  theme: {
-    warning: '#3f51b5',
-    success: '#b0bec5',
-    info: '#8c9eff',
-    error: '#b71c1c'
-  }
-})
+// Vue.use(Vuetify, {
+//   theme: {
+//     warning: '#3f51b5',
+//     success: '#b0bec5',
+//     info: '#8c9eff',
+//     error: '#b71c1c'
+//   }
+// })
 
 new Vue({
     el: '#app',
