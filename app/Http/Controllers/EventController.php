@@ -43,12 +43,12 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::findBySlugOrFail($slug);
         return view('event.show')->with('event',$event);
     }
 
