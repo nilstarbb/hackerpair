@@ -4,6 +4,8 @@
 
 <h1>Events</h1>
 
+<a class="btn" href="{{ route('events.create') }}">Create New</a>
+
 <div>
     <ul>
     @forelse ($events as $event) 

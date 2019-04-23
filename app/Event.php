@@ -18,4 +18,16 @@ class Event extends Model
             ]
         ];
     }
+
+    public function getRouteKeyName()
+    {
+        return $this->getSlugKeyName();
+    }
+
+    protected $fillable = [
+        'name',
+        'venue',
+        'city',
+        'description',
+    ];
 }

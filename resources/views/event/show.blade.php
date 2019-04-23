@@ -4,6 +4,8 @@
 
 <h1>Event: {{ $event->name }}</h1>
 
+<a class="btn" href="{{ route('events.edit',['event'=>$event]) }}">Edit</a>
+
 <dl class="row">
 
     <dt class="col-sm-2">Name</dt>

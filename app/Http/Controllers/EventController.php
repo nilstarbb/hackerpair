@@ -26,7 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('event.create');
     }
 
     /**
@@ -37,7 +37,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $event = Event::create([ 
+            'name' => $request->name,
+            'venue' => $request->venue,
+            'city' => $request->city,
+            'description' => $request->description,
+         ]); 
+        return redirect()->route('events.show', ['event' => $event]); 
     }
 
     /**
@@ -55,12 +61,12 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Event $event
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Event $event)
     {
-        //
+        return view('event.edit')->with('event',$event);
     }
 
     /**
@@ -70,9 +76,21 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
-        //
+        // TODO: Fix update problem
+        // $event = Event::findOrFail($id);
+        $event->update($request->all());
+        // $event->update([ 
+        //     'name' => $request->name,
+        //     'venue' => $request->venue,
+        //     'city' => $request->city,
+        //     'description' => $request->description,
+        // ]);
+        // $event->name = 'Update Function';
+        // $event->save();
+        // return redirect()->route('events.show', ['event' => $event]); 
+        return redirect()->route('events.index');         
     }
 
     /**
