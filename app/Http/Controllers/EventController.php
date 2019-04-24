@@ -46,7 +46,7 @@ class EventController extends Controller
             'city' => $request->city,
             'description' => $request->description,
          ]); 
-        // Mail::send(new EventEmail($event));
+        Mail::send(new EventEmail($event));
         return redirect()->route('events.show', ['event' => $event]); 
         // dd(new EventEmail($event));
     }

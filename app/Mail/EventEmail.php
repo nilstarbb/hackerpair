@@ -32,6 +32,6 @@ class EventEmail extends Mailable
      */
     public function build()
     {
-        return $this->to('emailtest@hackerpair.test')->view('emails.event');
+        return $this->to('serena.l@tourbillonsolutions.com')->view('emails.event');
     }
 }
