@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Hackerpair\Http\Requests\EventStoreRequest; 
 
 use Hackerpair\Event;
+use Illuminate\Support\Facades\Mail;
+use Hackerpair\Mail\EventEmail;
 
 class EventController extends Controller
 {
@@ -44,7 +46,9 @@ class EventController extends Controller
             'city' => $request->city,
             'description' => $request->description,
          ]); 
+        // Mail::send(new EventEmail($event));
         return redirect()->route('events.show', ['event' => $event]); 
+        // dd(new EventEmail($event));
     }
 
     /**
