@@ -5,7 +5,8 @@
 <h1>Edit Event</h1>
 
 <div>
-    <form method="PUT" action="{{ route('events.update',['event'=>$event]) }}">
+    <form method="POST" action="{{ route('events.update',['event'=>$event]) }}">
+        @method('PUT')
         @csrf
         <div class="form-group">
             <label for="name">Name</label>

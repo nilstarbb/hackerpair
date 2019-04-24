@@ -78,19 +78,8 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        // TODO: Fix update problem
-        // $event = Event::findOrFail($id);
         $event->update($request->all());
-        // $event->update([ 
-        //     'name' => $request->name,
-        //     'venue' => $request->venue,
-        //     'city' => $request->city,
-        //     'description' => $request->description,
-        // ]);
-        // $event->name = 'Update Function';
-        // $event->save();
-        // return redirect()->route('events.show', ['event' => $event]); 
-        return redirect()->route('events.index');         
+        return redirect()->route('events.show', ['event' => $event]); 
     }
 
     /**
