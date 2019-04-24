@@ -3,6 +3,7 @@
 namespace Hackerpair\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Hackerpair\Http\Requests\EventStoreRequest; 
 
 use Hackerpair\Event;
 
@@ -35,7 +36,7 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EventStoreRequest $request)
     {
         $event = Event::create([ 
             'name' => $request->name,

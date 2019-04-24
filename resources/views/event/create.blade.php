@@ -5,6 +5,16 @@
 <h1>Create New Event</h1>
 
 <div>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div> 
+    @endif
+
     <form method="POST" action="{{ route('events.store') }}">
         @csrf
         <div class="form-group">
