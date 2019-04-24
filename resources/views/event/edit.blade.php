@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label for="venue">Venue</label>
-            <input name="venue" type="text" class="form-control" id="venue">
+            <input name="venue" type="text" class="form-control" id="venue" value="{{ $event->venue }}">
         </div>
         <div class="form-group">
             <label for="city">City</label>

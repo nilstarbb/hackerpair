@@ -5,6 +5,11 @@
 <h1>Event: {{ $event->name }}</h1>
 
 <a class="btn" href="{{ route('events.edit',['event'=>$event]) }}">Edit</a>
+<form method="post" action="{{ route('events.destroy',['event'=>$event]) }}">
+    @method('DELETE')
+    @csrf
+    <input type="submit" value="Delete"/>
+</form>
 
 <dl class="row">
 
