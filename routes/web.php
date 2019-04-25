@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index')->name('home');
+Route::get('/', 'WelcomeController@index')->name('index');
 
 Route::resources([
     'events' => 'EventController',
