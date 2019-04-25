@@ -3,6 +3,7 @@
 namespace Hackerpair\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class EventStoreRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class EventStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return Auth::check();
     }
 
     /**

@@ -27,6 +27,9 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
+    protected $maxAttempts = 2;
+    protected $decayMinutes = 1;
+
     /**
      * Create a new controller instance.
      *
