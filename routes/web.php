@@ -1,4 +1,5 @@
 <?php
+// use Symfony\Component\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,7 @@ Route::resources([
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin' ], function(){
+    Route::resource('users','UsersController');
+});
